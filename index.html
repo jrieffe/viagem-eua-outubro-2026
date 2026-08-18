@@ -735,8 +735,8 @@ nav.tabs button{white-space:nowrap}
   let toastT; function toast(msg,ms){ const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('on'),ms||3200); }
 
   /* Share — link público do dashboard */
-  const SHARE_URL='https://claude.ai/code/artifact/49058f25-7bce-42a0-9950-433e1f4c2f1e';
-  const shareUrl=()=> (location.protocol==='file:' || /localhost|127\.0\.0\.1/.test(location.host)) ? SHARE_URL : (location.href.startsWith('https://claude.ai/')?location.href:SHARE_URL);
+  const SHARE_URL='https://jrieffe.github.io/viagem-eua-outubro-2026/';
+  const shareUrl=()=> /github\.io$/.test(location.hostname) ? (location.origin+location.pathname) : SHARE_URL;
   const box=$('#copybox'), urlIn=$('#copyUrl');
   function openBox(url){ urlIn.value=url; box.classList.add('on'); setTimeout(()=>{ urlIn.focus(); urlIn.select(); },50); }
   $('#copyClose').addEventListener('click',()=>box.classList.remove('on'));
