@@ -1,8 +1,17 @@
 # Viagem EUA · Outubro 2026
 
-Dashboard de planejamento da viagem em família a Miami, Nova York e Orlando (09 a 21 de outubro de 2026): roteiro dia a dia, clima, logística, prazos de reserva, orçamento com IOF e documentos.
+Guia de planejamento da viagem em família a **Miami, Nova York e Orlando**, de 09 a 21 de outubro de 2026.
 
-Arquivo único (`index.html`), sem dependências externas — publicado via GitHub Pages.
+**Acesse:** https://jrieffe.github.io/viagem-eua-outubro-2026/
 
-- Notas por dia, checklist e orçamento ficam salvos apenas no navegador de quem acessa.
-- Dados conferidos em agosto/2026; fontes na aba "Fontes" do próprio dashboard.
+## O que tem no guia
+
+Oito seções: visão geral, roteiro dia a dia (os 13 dias), clima, logística entre as cidades, prazos e checklist de reservas, orçamento em dólar convertido para reais com IOF, documentos e dicas, e as fontes dos dados.
+
+## Como foi feito
+
+Arquivo único (`index.html`), sem dependências externas — as imagens estão embutidas no próprio arquivo. Todo o conteúdo está escrito no HTML e a navegação usa âncoras, de modo que o guia funciona mesmo quando o navegador não executa JavaScript (por exemplo, na pré-visualização de arquivos do iPhone ou em anexos de WhatsApp e e-mail).
+
+Com JavaScript ativo (Safari, Chrome), o guia ainda mostra a contagem regressiva, calcula os totais do orçamento e salva as notas e o checklist — sempre apenas no aparelho de quem acessa, sem enviar nada para lugar nenhum.
+
+Dados conferidos em agosto de 2026; as fontes estão listadas na última seção do guia.
