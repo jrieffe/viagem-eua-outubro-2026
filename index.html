@@ -494,19 +494,21 @@ salvas neste aparelho.</div>
   parque — conferir no app My Disney Experience.</li>
 </ul></div><a class="next" href="#orcamento"><span><span class="k">Continue — seção 6 de 8</span><span class="t">Orçamento</span><span class="d">Planilha em dólar convertida para reais com IOF</span></span><span class="arrow" aria-hidden="true">→</span></a><a class="backtop" href="#indice">↑ Ver todas as 8 seções</a></section><section class="sec" id="orcamento"><div class="sec-head"><div class="n">6</div><div><h2>Orçamento</h2><div class="s">Seção 6 de 8 · Planilha em dólar convertida para reais com IOF</div></div></div>
 <div class="card budget"><h3>Planilha de orçamento (por família)</h3>
-<p class="small muted" style="margin-bottom:10px">Preencha os valores em dólar. O total em reais aplica câmbio, spread e
-<b>IOF de 3,5%</b> (alíquota de 2026 para cartão de crédito, débito, pré-pago e compra de moeda em espécie). Nada é
-enviado para lugar nenhum: fica salvo apenas neste aparelho.</p>
+<p class="small muted" style="margin-bottom:10px">A coluna <b>US$ a gastar</b> é sua estimativa do que ainda falta: o total em reais aplica câmbio, spread e
+<b>IOF de 3,5%</b>. A coluna <b>Já pago</b> traz o que foi comprado pela agência, <b>em reais e já no valor final</b> — por isso não passa por câmbio nem por IOF.
+Preencha só as passagens internacionais, cujo valor não está nos vouchers. Nada é enviado para lugar nenhum: fica salvo apenas neste aparelho.</p>
 <div class="params">
   <label>Câmbio (R$ por US$)<input type="number" id="fx" step="0.01" min="0" value="5.20" inputmode="decimal"></label>
   <label>Spread do banco ou cartão (%)<input type="number" id="spread" step="0.1" min="0" value="0" inputmode="decimal"></label>
   <label>IOF (%)<input type="number" id="iof" step="0.1" min="0" value="3.5" inputmode="decimal"></label>
 </div>
 <div class="tbl"><table id="budgetTable">
-<thead><tr><th>Categoria</th><th class="n">US$</th><th class="n">R$ (com IOF)</th></tr></thead>
-<tbody><tr><td>Passagens internacionais</td><td class="n"><input type="number" min="0" step="1" data-i="0" placeholder="0" inputmode="decimal" aria-label="Passagens internacionais em dólares"></td><td class="n num" data-brl="0">—</td></tr><tr><td>Voos internos<span class="obs">MIA → NYC (11/10) e NYC → MCO (15/10)</span></td><td class="n"><input type="number" min="0" step="1" data-i="1" placeholder="0" inputmode="decimal" aria-label="Voos internos em dólares"></td><td class="n num" data-brl="1">—</td></tr><tr><td>Brightline Orlando → Miami<span class="obs">20/10</span></td><td class="n"><input type="number" min="0" step="1" data-i="2" placeholder="0" inputmode="decimal" aria-label="Brightline Orlando → Miami em dólares"></td><td class="n num" data-brl="2">—</td></tr><tr><td>Hospedagem<span class="obs">13 noites</span></td><td class="n"><input type="number" min="0" step="1" data-i="3" placeholder="0" inputmode="decimal" aria-label="Hospedagem em dólares"></td><td class="n num" data-brl="3">—</td></tr><tr><td>Ingressos de parques<span class="obs">Universal 2 dias (16 e 17/10) · Disney 2 dias com Park Hopper (19 e 20/10)</span></td><td class="n"><input type="number" min="0" step="1" data-i="4" placeholder="0" inputmode="decimal" aria-label="Ingressos de parques em dólares"></td><td class="n num" data-brl="4">—</td></tr><tr><td>Alimentação</td><td class="n"><input type="number" min="0" step="1" data-i="5" placeholder="0" inputmode="decimal" aria-label="Alimentação em dólares"></td><td class="n num" data-brl="5">—</td></tr><tr><td>Transporte local e aluguel de carro<span class="obs">2 carros em Orlando (15 a 21/10, 6 diárias) · estacionamento dos parques, ~US$ 30 a 35 por carro por dia · táxi e aplicativo em Miami e NY</span></td><td class="n"><input type="number" min="0" step="1" data-i="6" placeholder="0" inputmode="decimal" aria-label="Transporte local e aluguel de carro em dólares"></td><td class="n num" data-brl="6">—</td></tr><tr><td>Compras<span class="obs">sales tax de 6,5% a 8,875%; em NJ roupas e calçados são isentos</span></td><td class="n"><input type="number" min="0" step="1" data-i="7" placeholder="0" inputmode="decimal" aria-label="Compras em dólares"></td><td class="n num" data-brl="7">—</td></tr><tr><td>Seguro-viagem</td><td class="n"><input type="number" min="0" step="1" data-i="8" placeholder="0" inputmode="decimal" aria-label="Seguro-viagem em dólares"></td><td class="n num" data-brl="8">—</td></tr><tr><td>Outros<span class="obs">inclui os jogos opcionais, se comprar</span></td><td class="n"><input type="number" min="0" step="1" data-i="9" placeholder="0" inputmode="decimal" aria-label="Outros em dólares"></td><td class="n num" data-brl="9">—</td></tr></tbody>
+<thead><tr><th>Categoria</th><th class="n">US$ a gastar</th><th class="n">R$ (com IOF)</th><th class="n">Já pago (R$)</th></tr></thead>
+<tbody><tr><td>Passagens internacionais</td><td class="n"><input type="number" min="0" step="1" data-i="0" placeholder="0" inputmode="decimal" aria-label="Passagens internacionais em dólares"></td><td class="n num" data-brl="0">—</td><td class="n"><input type="number" min="0" step="1" id="pagoIntl" placeholder="0" inputmode="decimal" aria-label="Passagens internacionais já pagas, em reais"></td></tr><tr><td>Voos internos<span class="obs">FLL → LGA (11/10) e LGA → MCO (15/10)</span></td><td class="n"><input type="number" min="0" step="1" data-i="1" placeholder="0" inputmode="decimal" aria-label="Voos internos em dólares"></td><td class="n num" data-brl="1">—</td><td class="n num" data-pago="7159.52"><b>7.159,52</b><span class="obs">American, KLOP4M</span></td></tr><tr><td>Brightline Orlando → Miami<span class="obs">21/10</span></td><td class="n"><input type="number" min="0" step="1" data-i="2" placeholder="0" inputmode="decimal" aria-label="Brightline Orlando → Miami em dólares"></td><td class="n num" data-brl="2">—</td><td class="n num">—</td></tr><tr><td>Hospedagem<span class="obs">13 noites · Miami 09–11 e Nova York 11–15 já pagos · falta Orlando (6) e a noite de 21–22 em Miami</span></td><td class="n"><input type="number" min="0" step="1" data-i="3" placeholder="0" inputmode="decimal" aria-label="Hospedagem em dólares"></td><td class="n num" data-brl="3">—</td><td class="n num" data-pago="10947.81"><b>10.947,81</b><span class="obs">Nova York. Miami 09–11 sai da conf. 3134080, ainda a confirmar depois do estorno da etapa cancelada</span></td></tr><tr><td>Ingressos de parques<span class="obs">Universal 2 dias (16 e 17/10) · Disney 2 dias com Park Hopper (19 e 20/10)</span></td><td class="n"><input type="number" min="0" step="1" data-i="4" placeholder="0" inputmode="decimal" aria-label="Ingressos de parques em dólares"></td><td class="n num" data-brl="4">—</td><td class="n num">—</td></tr><tr><td>Alimentação</td><td class="n"><input type="number" min="0" step="1" data-i="5" placeholder="0" inputmode="decimal" aria-label="Alimentação em dólares"></td><td class="n num" data-brl="5">—</td><td class="n num">—</td></tr><tr><td>Transporte local e aluguel de carro<span class="obs">2 carros em Orlando (15 a 21/10, 6 diárias) · estacionamento dos parques, ~US$ 30 a 35 por carro por dia · táxi e aplicativo em Miami e NY</span></td><td class="n"><input type="number" min="0" step="1" data-i="6" placeholder="0" inputmode="decimal" aria-label="Transporte local e aluguel de carro em dólares"></td><td class="n num" data-brl="6">—</td><td class="n num">—</td></tr><tr><td>Compras<span class="obs">sales tax de 6,5% a 8,875%; em NJ roupas e calçados são isentos</span></td><td class="n"><input type="number" min="0" step="1" data-i="7" placeholder="0" inputmode="decimal" aria-label="Compras em dólares"></td><td class="n num" data-brl="7">—</td><td class="n num">—</td></tr><tr><td>Seguro-viagem</td><td class="n"><input type="number" min="0" step="1" data-i="8" placeholder="0" inputmode="decimal" aria-label="Seguro-viagem em dólares"></td><td class="n num" data-brl="8">—</td><td class="n num">—</td></tr><tr><td>Outros<span class="obs">inclui os jogos opcionais, se comprar</span></td><td class="n"><input type="number" min="0" step="1" data-i="9" placeholder="0" inputmode="decimal" aria-label="Outros em dólares"></td><td class="n num" data-brl="9">—</td><td class="n num">—</td></tr></tbody>
 </table></div>
-<div class="totais"><span class="lbl">Total</span><b class="num" id="totUsd">US$ 0</b><b class="num brl" id="totBrl">R$ 0</b></div>
+<div class="totais"><span class="lbl">Ainda a gastar (estimativa que você preenche)</span><b class="num" id="totUsd">US$ 0</b><b class="num brl" id="totBrl">R$ 0</b></div>
+<div class="totais"><span class="lbl">Já pago — em reais, sem câmbio nem IOF</span><b class="num brl" id="totPago">R$ 18.107</b></div>
+<div class="totais"><span class="lbl">Total geral — já pago mais o que falta gastar</span><b class="num brl" id="totGeral">R$ 18.107</b></div>
 <p class="small muted js-only" style="margin-top:8px">Os totais são calculados automaticamente conforme você digita.</p>
 <p class="small muted no-js-only" style="margin-top:8px">Nesta pré-visualização a tabela é apenas de leitura. Para calcular os totais, abra o arquivo no Safari ou no Chrome.</p>
 </div>
@@ -648,7 +650,7 @@ cotação do dia.</p></div><a class="next last" href="#indice"><span><span class
         if(par[id]!==undefined && par[id]!==null) e.value=par[id];
         e.addEventListener('input',function(){ par[id]=e.value; save('params',par); calc(); });
       });
-      var inputs=$$('#budgetTable tbody input');
+      var inputs=$$('#budgetTable tbody input[data-i]');
       inputs.forEach(function(i){
         var k=i.getAttribute('data-i');
         if(bud[k]!==undefined && bud[k]!==null) i.value=bud[k];
@@ -666,6 +668,16 @@ cotação do dia.</p></div><a class="next last" href="#indice"><span><span class
         });
         $('#totUsd').textContent='US$ '+Math.round(tot).toLocaleString('pt-BR');
         $('#totBrl').textContent=money(tot*f);
+        var pago=0;
+        $$('#budgetTable [data-pago]').forEach(function(c){ pago+=parseFloat(c.getAttribute('data-pago'))||0; });
+        var pin=$('#pagoIntl'); if(pin) pago+=parseFloat(pin.value)||0;
+        var tp=$('#totPago'); if(tp) tp.textContent=money(pago);
+        var tg=$('#totGeral'); if(tg) tg.textContent=money(pago+tot*f);
+      }
+      var pin=$('#pagoIntl');
+      if(pin){
+        if(bud.pi!==undefined && bud.pi!==null) pin.value=bud.pi;
+        pin.addEventListener('input',function(){ bud.pi=pin.value; save('budget',bud); calc(); });
       }
       calc();
     }
